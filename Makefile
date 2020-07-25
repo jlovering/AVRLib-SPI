@@ -10,7 +10,7 @@ CFLAGS += -Wall -Werror -Wextra -std=gnu99 -Os -pedantic
 LIBSOURCEDIR = source
 LIBOBJDIR = libobjects
 LIBOBJECTS = $(patsubst $(LIBSOURCEDIR)/%.c,$(LIBOBJDIR)/%.o,$(wildcard $(LIBSOURCEDIR)/*.c))
-LIBBINARY = libavruart.a
+LIBBINARY = libavrspi.a
 
 LIBINCLUDEDIR = include
 
