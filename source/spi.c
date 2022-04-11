@@ -29,13 +29,16 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
+#if (defined(__AVR_ATmega328P__))
 #define PORT_SPI    PORTB
 #define DDR_SPI     DDRB
 #define DD_MISO     DDB4
 #define DD_MOSI     DDB3
 #define DD_SS       DDB2
 #define DD_SCK      DDB5
-
+#else
+#error "Don't have port definitions for MCU type"
+#endif
 
 void spi_init()
 // Initialize pins for spi communication
